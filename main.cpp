@@ -45,7 +45,7 @@ struct streamsRootCord{
     ostringstream out;
     istringstream in;
     istringstream error;
-    istringstream logger;
+    istringstream logdata;
 
 
     streambuf *promptPointer;
@@ -59,7 +59,7 @@ void setup(){//initRodentsForum
     cout.clear();
     squeekNet.in.tie(&cout);//shell-print_human-cin
     squeekNet.error.tie(&cerr);
-    squeekNet.logger.tie(&clog);
+    squeekNet.logdata.tie(&clog);
     squeekNet.tie(&squeekNet.in);
 }
 
