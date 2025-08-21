@@ -2,11 +2,13 @@ echo "building hamster-prompt test version"
 cat README.md
 g++ main.cpp
 echo "~~~~~~~~~~~~~~~~"
-ls
-echo "~~~~~~~~~~~~~~~~"
-ls|cat
-echo "~~~~~~~~~~~~~~~~"
-ls|./a.out ./tmp.txt|cat
-echo "~~~~~~~~~~~~~~~~"
-bash -i >& ./a.out ./tmp.txt 0>&1
-pause
+#ls
+#echo "~~~~~~~~~~~~~~~~"
+#ls|cat
+#echo "~~~~~~~~~~~~~~~~"
+#ls|./a.out ./tmp.txt|cat
+#echo "~~~~~~~~~~~~~~~~"
+#bash -i >& ./a.out ./tmp.txt 0>&1
+#pause
+tty
+bash -i 0<&1 1>&0 2>&0 |./a.out
